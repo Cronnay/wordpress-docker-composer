@@ -17,6 +17,9 @@
  *
  * @package WordPress
  */
+require_once(__DIR__ . '/vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
@@ -94,4 +97,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
-(new \Dotenv\Dotenv(__DIR__.'/../'))->load();
